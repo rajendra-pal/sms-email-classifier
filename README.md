@@ -30,7 +30,7 @@ SpamShield uses a trained `StackingClassifier` to analyze incoming messages and 
 
 1. **Clone the repository**:
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/rajendra-pal/sms-email-classifier.git
    cd sms-spam-classifier
    ```
 
