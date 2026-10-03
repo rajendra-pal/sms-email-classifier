@@ -6,9 +6,15 @@ import numpy as np
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
-nltk.download("punkt")
-nltk.download("punk_tab")
-nltk.download("stopwords")
+try:
+    nltk.data.find("tokenizers/punkt_tab")
+except LookupError:
+    nltk.download("punkt_tab", quiet=True)
+
+try:
+    nltk.data.find("corpora/stopwords")
+except LookupError:
+    nltk.download("stopwords", quiet=True)
 
 ps = PorterStemmer()
 
